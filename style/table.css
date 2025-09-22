@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* Estilos para tabelas */ 
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+
+table th {
+    background-color: var(--cor-primaria-claro);
+    color: var(--cor-texto-escuro);
+}
+
+/* Estilos para td colunas da tabela */
+table td {
+    border: 1px solid var(--cor-primaria-escuro);
+    padding: 10px;
+    text-align: left;
+}
+table td:nth-child(1), table td:nth-child(3) {
+    width: 20%;
+}
+
+
+/* Estilos para tr Linhas das tabelas */
+
+table tr:hover {
+    background-color: var(--cor-primaria-claro);
+    color: var(--cor-texto-escuro);
+    transition: background-color 0.3s ease;
+}
