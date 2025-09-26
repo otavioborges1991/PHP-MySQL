@@ -33,6 +33,7 @@ header {
     color: var(--cor-texto-claro);
     padding: 10px 20px;
     text-align: center;
+    margin-bottom: 30px;
 }
 main {
     background-color: var(--cor-fundo-claro);
@@ -50,6 +51,7 @@ footer {
     padding: 10px 20px;
     bottom: 0;
     width: 100%;
+    margin-top: 30px;
 }
 section {
     background-color: var(--cor-fundo-claro);
@@ -61,4 +63,13 @@ section {
 
 div.margin {
     margin: 20px;
+}
+
+div.border {
+    border: 1px solid var(--cor-primaria-escuro);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background-color: var(--cor-fundo-claro);
+    margin: 10px;
 }

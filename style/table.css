@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* Estilos para tabelas */ 
+/* Estilos para tabelas */
 
 table {
     width: 100%;
@@ -8,16 +8,14 @@ table {
     margin-top: 20px;
 }
 
-
-
-table th {
+thead {
     background-color: var(--cor-primaria-claro);
     color: var(--cor-texto-escuro);
 }
 
 /* Estilos para td colunas da tabela */
 table td {
-    border: 1px solid var(--cor-primaria-escuro);
+    border: 3px solid var(--cor-primaria-escuro);
     padding: 10px;
     text-align: left;
 }
@@ -25,8 +23,13 @@ table td:nth-child(1), table td:nth-child(3) {
     width: 20%;
 }
 
-table tr:nth-child(2) {
+table tr:nth-child(even) {
     background-color: white;
+}
+
+td img {
+    height: 300px;
+    width: auto;
 }
 
 
@@ -36,4 +39,18 @@ table tr:hover {
     background-color: var(--cor-primaria-claro);
     color: var(--cor-texto-escuro);
     transition: background-color 0.3s ease;
+}
+
+div.scroll {
+    max-height: 250px;
+    width: fit-content;
+    overflow-x: auto;
+    margin: 5px;
+    padding: 5px;
+}
+
+td div.scroll p {
+    text-indent: 20px;
+    line-height: 1.5;
+    font-size: small;
 }
