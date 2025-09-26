@@ -25,6 +25,10 @@ table td:nth-child(1), table td:nth-child(3) {
     width: 20%;
 }
 
+table tr:nth-child(2) {
+    background-color: white;
+}
+
 
 /* Estilos para tr Linhas das tabelas */
 
