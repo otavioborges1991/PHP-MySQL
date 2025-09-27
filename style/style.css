@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @import url(table.css);
+@import url(article.css);
+@import url(flex.css);
+@import url(classes.css);
+@import url(grid.css);
 /* CSS Document */
 :root {
     --cor-primaria-claro: #5366F5;
@@ -20,12 +24,18 @@
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
+
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     color: var(--cor-texto-claro);
     transition: all 0.3s ease-in-out;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
 }
 
 header {
@@ -37,11 +47,10 @@ header {
 }
 main {
     background-color: var(--cor-fundo-claro);
-    padding: 20px;
     min-width: 480px;
-    max-width: 90vw;
-    min-height: 90vh;
+    max-width: 90%;
     margin: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 footer {
@@ -49,7 +58,6 @@ footer {
     color: var(--cor-texto-claro);
     text-align: center;
     padding: 10px 20px;
-    bottom: 0;
     width: 100%;
     margin-top: 30px;
 }
@@ -61,15 +69,33 @@ section {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-div.margin {
-    margin: 20px;
+button {
+    margin: auto;
+    background-color: var(--cor-primaria-claro);
+    color: var(--cor-texto-claro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-div.border {
-    border: 1px solid var(--cor-primaria-escuro);
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+button:hover {
+    background-color: var(--cor-terciaria-claro);
+}
+
+div header {
+    text-align: center;
+    margin: 0px;
     padding: 10px;
-    background-color: var(--cor-fundo-claro);
-    margin: 10px;
+    height: 50px;
+    color: var(--cor-primaria-claro);
+}
+
+div header h3 {
+    color: var(--cor-texto-claro);
+}
+
+img {
+    text-align: center;
 }

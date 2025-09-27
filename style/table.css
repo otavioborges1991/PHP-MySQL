@@ -28,8 +28,10 @@ table tr:nth-child(even) {
 }
 
 td img {
-    height: 300px;
-    width: auto;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 
@@ -41,16 +43,5 @@ table tr:hover {
     transition: background-color 0.3s ease;
 }
 
-div.scroll {
-    max-height: 250px;
-    width: fit-content;
-    overflow-x: auto;
-    margin: 5px;
-    padding: 5px;
-}
 
-td div.scroll p {
-    text-indent: 20px;
-    line-height: 1.5;
-    font-size: small;
-}
+

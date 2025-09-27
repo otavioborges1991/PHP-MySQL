@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+article {
+    padding: 10px;
+}
+
+article h1 {
+    margin-bottom: 10px;
+    color: var(--cor-primaria-claro);
+    text-align: center;
+}
+
+article p {
+    margin-bottom: 10px;
+    margin-top: 30px;
+    line-height: 1.6;
+    text-align: justify;
+    text-indent: 15px;
+}

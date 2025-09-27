@@ -12,10 +12,12 @@
     require_once "includes/funcoes.php";
     ?>
     <header>
-        <h1>Jogos</h1>
+            <h1>Jogos</h1>
     </header>
     <main>
-        <h1>Escolha seu jogo</h1>
+        <header>
+            <h1>Escolha seu jogo</h1>
+        </header>
         <table>
             <thead>
                 <th>Foto</th>
@@ -32,10 +34,10 @@
                 } else {
                     while ($reg=$busca->fetch_object()) {
                         $thumbnail = thumb($reg->capa);
-                        echo "<tr>";
+                        echo '<tr>';
                         echo "<td><img src='{$thumbnail}' alt='{$reg->nome}'></td>";
-                        echo "<td><h2>$reg->nome</h2><div class='scroll'><p>$reg->descricao</p></div></td>";
-                        echo "<td>ADM</td>";
+                        echo "<td><h2><a href='detalhes.php?codigo={$reg->codigo}' target='_self' referrerpolicy='same-origin'>$reg->nome</h2></a></td>";
+                        echo "<td>ADM</td></tr>";
                     }
                 }
             }
