@@ -34,6 +34,9 @@ td img {
     border-radius: 50%;
 }
 
+table tr {
+    max-height: 80px;
+}
 
 /* Estilos para tr Linhas das tabelas */
 

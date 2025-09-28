@@ -99,3 +99,11 @@ div header h3 {
 img {
     text-align: center;
 }
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
