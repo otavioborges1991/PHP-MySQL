@@ -10,14 +10,19 @@
     <?php 
     require_once "includes/banco.php";
     require_once "includes/funcoes.php";
+    require_once "topo.php"
     ?>
-    <header>
-            <h1>Jogos</h1>
-    </header>
     <main>
         <header>
             <h1>Escolha seu jogo</h1>
         </header>
+        <nav>
+            <form action="index.php" method="get">
+                Ordenar: Nome | Produtora | Maior Nota | Menor Nota |
+                <input type="text" name="busca" id="busca" size="10" maxlength="40">
+                <input type="submit" value="Buscar">
+            </form>
+        </nav>
         <table>
             <thead>
                 <th>Foto</th>
@@ -44,9 +49,8 @@
             ?>
         </table>
     </main>
-    <footer>
-        <p>Desenvolvido por <strong>Otavio Vinicios Borges</strong> para o curso de PHP com MySQL do Estudonauta</p>
-    </footer>
-    <?php $banco->close(); ?>
+    <?php 
+    include_once "rodape.php";
+    ?>
 </body>
 </html>

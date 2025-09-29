@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+:root {
+    --cor-primaria-claro: #5366F5;
+    --cor-primaria-escuro: #616475;
+    --cor-secundaria-claro: #90F551;
+    --cor-secundaria-escuro: #697562;
+    --cor-terciaria-claro: #F57E51;
+    --cor-terciaria-escuro: #A0796A;
+    --cor-fundo-claro: #E1E1E6;
+    --cor-fundo-escuro: #343536;
+    --cor-texto-claro: #000000;
+    --cor-texto-escuro: #FFFFFF;
+}
