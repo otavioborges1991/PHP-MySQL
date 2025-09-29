@@ -27,6 +27,10 @@
             exit;
         } else {
             $registro = $busca->fetch_object();
+            $q = $banco->query("SELECT nome FROM generos WHERE codigo = '{$registro->genero_codigo}'");
+            $genero = $q->fetch_object();
+            $q = $banco->query("SELECT nome FROM produtoras WHERE codigo = '{$registro->produtor_codigo}'");
+            $produtora = $q->fetch_object();
         }
         ?>
         <div class="margin grid-container">
@@ -39,6 +43,9 @@
                 </div>
                 <div class="border descricao">
                     <?php
+                        echo "<h4>Genero: $genero->nome</h4>";
+                        echo "<h4>Produtora: $produtora->nome</h4>";
+                        echo "<h4>Nota: ". number_format($registro->nota, 1) . " / 10</h4>";
                         echo "<p>$registro->descricao</p>";
                     ?>
                 </div>
