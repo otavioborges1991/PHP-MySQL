@@ -20,3 +20,10 @@
     padding: 10px;
 }
 
+.float-left {
+    float: left;
+}
+
+.float-bottom {
+    float: bottom;
+}

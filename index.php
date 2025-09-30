@@ -16,8 +16,7 @@
     $sentido = $_GET['sentido'] ?? 'ASC';
     $busca = $_GET['busca'] ?? null;
 
-    $lista_values = array('nome', 'produtora', 'genero', 'nota');
-    $lista_textos = array('Nome', 'Produtora', 'Gênero', 'Nota')
+    $lista = array('nome'=>'Nome', 'produtora'=>'Produtora', 'genero'=>'Gênero', 'nota'=>'Nota');
 
     ?>
     <main>
@@ -29,13 +28,13 @@
                 <label for="ordem">Ordenar:</label>
                 <select name="ordem" id="ordem">
                     <?php
-                    for ($index = 0; $index < count($lista_values); $index++) {
-                        if ($ordem == $lista_values[$index]) {
+                    foreach ($lista as $chave => $valor) {
+                        if ($ordem == $chave) {
                             $selected = 'selected';
                         } else {
                             $selected = null;
                         }
-                        echo "<option $selected value='$lista_values[$index]'>$lista_textos[$index]</option>";
+                        echo "<option $selected value='$chave'>$valor</option>";
                        
                     }
                     ?>
@@ -51,6 +50,7 @@
                 </label>
                 <input type="text" name="busca" id="busca" size="10" maxlength="40" value="<?php echo $busca?>">
                 <input type="submit" value="Buscar">
+                <a class="center" href="index.php">Mostrar Todos</a>
             </form>
         </nav>
         <table>
