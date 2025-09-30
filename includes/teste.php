@@ -21,13 +21,13 @@ $banco->query("SET character_set_results=utf8");
 // Ja estava funcionando sem isso.
 
 // Testando uma busca
-$busca = $banco->query("select * from generos");
-if (!$busca) {
+$query = $banco->query("select * from generos");
+if (!$query) {
     echo "Erro na consulta: " . $banco->errno;
     die();
 } else {
-    for ($i = 0; $i < $busca->num_rows; $i++) {
-        $registro = $busca->fetch_object();
+    for ($i = 0; $i < $query->num_rows; $i++) {
+        $registro = $query->fetch_object();
         echo "<div class='border'><pre>";
         print_r($registro);
         echo "</pre></div>";

@@ -18,13 +18,13 @@
         </header>
         <?php
         $codigo = $_GET['codigo'] ?? null;
-        $busca = $banco->query("SELECT * FROM jogos WHERE codigo='$codigo'");
-        if (!$codigo || !is_numeric($codigo) || !$busca || $busca->num_rows != 1) {
+        $query = $banco->query("SELECT * FROM jogos WHERE codigo='$codigo'");
+        if (!$codigo || !is_numeric($codigo) || !$query || $query->num_rows != 1) {
             echo "<p class='aviso'>Jogo inválido</p>";
             echo '<button class="margin" onclick="window.history.back()">Voltar</button>';
             exit;
         } else {
-            $registro = $busca->fetch_object();
+            $registro = $query->fetch_object();
             $q = $banco->query("SELECT nome FROM generos WHERE codigo = '{$registro->genero_codigo}'");
             $genero = $q->fetch_object();
             $q = $banco->query("SELECT nome FROM produtoras WHERE codigo = '{$registro->produtor_codigo}'");

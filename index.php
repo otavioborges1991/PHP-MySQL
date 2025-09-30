@@ -14,6 +14,7 @@
 
     $ordem = $_GET['ordem'] ?? null;
     $sentido = $_GET['sentido'] ?? 'ASC';
+    $busca = $_GET['busca'] ?? null;
 
     $lista_values = array('nome', 'produtora', 'genero', 'nota');
     $lista_textos = array('Nome', 'Produtora', 'Gênero', 'Nota')
@@ -48,7 +49,7 @@
                     Z-A 9-0
                     <input <?php if ($sentido == 'DESC') {echo 'checked';}?> type="radio" name="sentido" id="decrescente" value="DESC">
                 </label>
-                <input type="text" name="busca" id="busca" size="10" maxlength="40">
+                <input type="text" name="busca" id="busca" size="10" maxlength="40" value="<?php echo $busca?>">
                 <input type="submit" value="Buscar">
             </form>
         </nav>
@@ -59,46 +60,50 @@
                 <th>Adm</th>
             </thead>
             <?php
-            $query = "SELECT j.codigo, j.nome, g.nome genero, j.capa, p.nome produtora FROM jogos j 
+            $termos = "SELECT j.codigo, j.nome, g.nome genero, j.capa, p.nome produtora FROM jogos j 
             JOIN generos g on j.genero_codigo = g.codigo
             JOIN produtoras p on j.produtor_codigo = p.codigo ";
 
+            if ($busca) {
+                $termos .= "WHERE j.nome like '%$busca%' ";
+            }
+
             switch ($ordem) {
                 case 'nome':
-                    $query .= "ORDER BY j.nome ";
+                    $termos .= "ORDER BY j.nome ";
                     break;
                 case 'produtora':
-                    $query .= "ORDER BY produtora ";
+                    $termos .= "ORDER BY produtora ";
                     break;
                 case 'genero':
-                    $query .= "ORDER BY genero ";
+                    $termos .= "ORDER BY genero ";
                     break;
                 case 'nota':
-                    $query .= "ORDER BY j.nota ";
+                    $termos .= "ORDER BY j.nota ";
                     break;
                 default:
-                    $query .= "ORDER BY j.nome ";
+                    $termos .= "ORDER BY j.nome ";
             }
 
             switch ($sentido) {
                 case 'ASC':
-                    $query .= 'ASC ';
+                    $termos .= 'ASC ';
                     break;
                 case 'DESC':
-                    $query .= 'DESC ';
+                    $termos .= 'DESC ';
                     break;
                 default:
-                    $query .= 'ASC ';
+                    $termos .= 'ASC ';
             }
 
-            $busca = $banco->query($query);
-            if (!$busca) {
+            $query = $banco->query($termos);
+            if (!$query) {
                 echo "Falha na consulta";
             } else {
-                if ($busca->num_rows == 0) {
+                if ($query->num_rows == 0) {
                     echo "<td><td>Nenhum Jogo cadastrado, ou erro na busca.</td></tr>";
                 } else {
-                    while ($reg=$busca->fetch_object()) {
+                    while ($reg=$query->fetch_object()) {
                         $thumbnail = thumb($reg->capa);
                         $genero =  $reg->genero ?? "Não classificado";
                         $produtora = $reg->produtora ?? 'Desconhecido';
