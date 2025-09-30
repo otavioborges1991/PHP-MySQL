@@ -13,6 +13,7 @@
     require_once "topo.php";
 
     $ordem = $_GET['ordem'] ?? null;
+    $sentido = $_GET['sentido'] ?? 'ASC';
 
     $lista_values = array('nome', 'produtora', 'genero', 'nota');
     $lista_textos = array('Nome', 'Produtora', 'Gênero', 'Nota')
@@ -39,6 +40,14 @@
                     ?>
 
                 </select>
+                <label for="ascendente">
+                    0-9 A-Z
+                    <input <?php if ($sentido == 'ASC') {echo 'checked';}?> type="radio" name="sentido" id="ascendente" value="ASC">
+                </label>
+                <label for="decrescente">
+                    Z-A 9-0
+                    <input <?php if ($sentido == 'DESC') {echo 'checked';}?> type="radio" name="sentido" id="decrescente" value="DESC">
+                </label>
                 <input type="text" name="busca" id="busca" size="10" maxlength="40">
                 <input type="submit" value="Buscar">
             </form>
@@ -56,14 +65,30 @@
 
             switch ($ordem) {
                 case 'nome':
-                    $query .= "ORDER BY j.nome";
+                    $query .= "ORDER BY j.nome ";
                     break;
                 case 'produtora':
-                    $query .= "ORDER BY produtora";
+                    $query .= "ORDER BY produtora ";
                     break;
                 case 'genero':
-                    $query .= "ORDER BY genero";
+                    $query .= "ORDER BY genero ";
                     break;
+                case 'nota':
+                    $query .= "ORDER BY j.nota ";
+                    break;
+                default:
+                    $query .= "ORDER BY j.nome ";
+            }
+
+            switch ($sentido) {
+                case 'ASC':
+                    $query .= 'ASC ';
+                    break;
+                case 'DESC':
+                    $query .= 'DESC ';
+                    break;
+                default:
+                    $query .= 'ASC ';
             }
 
             $busca = $banco->query($query);
