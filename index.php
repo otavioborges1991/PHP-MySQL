@@ -65,7 +65,7 @@
             JOIN produtoras p on j.produtor_codigo = p.codigo ";
 
             if ($busca) {
-                $termos .= "WHERE j.nome like '%$busca%' ";
+                $termos .= "WHERE j.nome like '%$busca%' OR p.nome like '%$busca%' OR g.nome like '%$busca%' OR j.nota like '%$busca%' ";
             }
 
             switch ($ordem) {
