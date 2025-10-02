@@ -1,14 +1,11 @@
 <link rel="stylesheet" href="style/style.css">
 <?php
-    $usuario_ip = $_SERVER['REMOTE_ADDR'] ?? null;
-    $usuario = $_SESSION['USER'] ?? $usuario_ip;
-    $data = date('d/m/y')
+require_once "includes/funcoes.php"
 ?>
 <header>
-    <div class="inline-block">
-        <h1>Jogos</h1>
-    </div>
-    <div class="inline-block">
+    <h1>Jogos</h1>
+    <nav class="margin">
+        <?php echo usuario(show_ip:true);?>
         <input type="button" value="<?php if ($usuario != null) {echo 'Sair';} else { echo 'Entrar';}?>">
-    </div>
+    </nav>
 </header>
