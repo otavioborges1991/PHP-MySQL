@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes</title>
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
 <body>
     <?php
@@ -52,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <button onclick="window.history.back()" class="margin">Voltar</button>
+        <a href="index.php" class="margin"><img src="icones/icoback.png" alt="Voltar"></a>
     </main>
     <?php 
     include_once "rodape.php";

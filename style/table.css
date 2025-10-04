@@ -1,18 +1,14 @@
 @charset "UTF-8";
-
 /* Estilos para tabelas */
-
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
-
 thead {
     background-color: var(--cor-primaria-claro);
     color: var(--cor-texto-escuro);
 }
-
 /* Estilos para td colunas da tabela */
 table td {
     border: 3px solid var(--cor-primaria-escuro);
@@ -22,27 +18,19 @@ table td {
 table td:nth-child(1), table td:nth-child(3) {
     width: 20%;
 }
-
 table tr:nth-child(even) {
     background-color: white;
 }
-
 td img {
     height: 75px;
     object-fit: cover;
 }
-
 table tr {
     max-height: 80px;
 }
-
 /* Estilos para tr Linhas das tabelas */
-
 table tr:hover {
     background-color: var(--cor-primaria-claro);
     color: var(--cor-texto-escuro);
     transition: background-color 0.3s ease;
 }
-
-
-

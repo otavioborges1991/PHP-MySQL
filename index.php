@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogos</title>
     <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
 <body>
     <?php 
@@ -17,7 +19,10 @@
     $busca = $_GET['busca'] ?? null;
 
     $lista = array('nome'=>'Nome', 'produtora'=>'Produtora', 'genero'=>'Gênero', 'nota'=>'Nota');
-
+    
+    echo msg_sucesso("Arquivo aberto!");
+    echo msg_aviso("Nome incompleto!");
+    echo msg_erro('Senha invalida!')
     ?>
     <main>
         <header>

@@ -9,11 +9,29 @@
 .scroll {
     overflow-x: auto;
 }
-.aviso {
-    color: red;
+.sucesso {
+    color: black;
+    background-color: green;
     font-weight: bold;
     text-align: center;
-    margin: 20px 0;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.aviso {
+    color: black;
+    background-color: yellow;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.erro {
+    color: black;
+    background-color: red;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 .descricao {
     text-indent: 15px;
@@ -26,4 +44,9 @@
 
 .float-bottom {
     float: bottom;
+}
+
+.center {
+    vertical-align: center;
+    text-align: center;
 }

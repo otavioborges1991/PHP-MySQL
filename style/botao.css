@@ -14,3 +14,13 @@ button {
 button:hover {
     background-color: var(--cor-terciaria-claro);
 }
+
+button.voltar {
+    background: 
+        var(--cor-primaria-claro)
+        url(../icones/icoback.png)
+        no-repeat
+        center / cover;
+    width: 100px;
+    height: 100px;
+}
