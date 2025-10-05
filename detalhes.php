@@ -13,6 +13,7 @@
     require_once "includes/banco.php";
     require_once "includes/funcoes.php";
     require_once "cabecalho.php";
+    require_once "includes/login.php";
     ?>
     <main>
         <header>
