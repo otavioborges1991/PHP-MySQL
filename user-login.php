@@ -8,6 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 </head>
 <body>
+    <?php 
+    require "includes/banco.php";
+    require "includes/login.php";
+    require "includes/funcoes.php";
+    ?>
     <main>
         <?php
         $email = $_POST["email"] ?? null;
@@ -16,9 +21,6 @@
         if (is_null($email) || is_null($senha)) {
             require "user-login-form.php";
         } else {
-            require "includes/banco.php";
-            require "includes/login.php";
-            require "includes/funcoes.php";
             $termos = "SELECT email, senha, nome_completo, tipo
             FROM usuarios WHERE email = '$email' LIMIT 1";
             $query = $banco->query($termos);
@@ -42,9 +44,8 @@
                 }
             }
         }
-        echo '<button class="margin" onclick="history.back()">Voltar</button>';
+        voltar();
         ?>
-    
 </main>
 </body>
 </html>

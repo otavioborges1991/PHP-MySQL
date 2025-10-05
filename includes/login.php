@@ -25,3 +25,10 @@ function testarHash($senha, $hash):bool {
     $ok = password_verify($senha_encriptada, $hash);
     return $ok;
 }
+
+function logout() {
+    session_unset();  
+    //unset($_SESSION['user']);
+    //unset($_SESSION['nome']);
+    //unset($_SESSION['tipo']);
+}

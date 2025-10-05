@@ -34,3 +34,7 @@ function msg_erro($mensagem='Erro!'){
     return "<div class='erro'><span class='material-symbols-outlined'>error</span>$mensagem</div>";
 }
 
+function voltar() {
+    echo '<button class="margin" onclick="history.back()">Voltar</button>';
+}
+

@@ -13,13 +13,21 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button a {
+a.botao {
+    display: inline-block;
+    background-color: var(--cor-primario-claro);
     color: white;
     font-weight: bold;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     text-decoration: none;
 }
 
 button.voltar {
+    
     width: 100px;
     height: 100px;
 }
