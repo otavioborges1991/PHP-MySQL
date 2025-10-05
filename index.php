@@ -12,17 +12,14 @@
     <?php 
     require_once "includes/banco.php";
     require_once "includes/funcoes.php";
-    require_once "topo.php";
+    require_once "cabecalho.php";
+
 
     $ordem = $_GET['ordem'] ?? null;
     $sentido = $_GET['sentido'] ?? 'ASC';
     $busca = $_GET['busca'] ?? null;
 
     $lista = array('nome'=>'Nome', 'produtora'=>'Produtora', 'genero'=>'Gênero', 'nota'=>'Nota');
-    
-    echo msg_sucesso("Arquivo aberto!");
-    echo msg_aviso("Nome incompleto!");
-    echo msg_erro('Senha invalida!')
     ?>
     <main>
         <header>
