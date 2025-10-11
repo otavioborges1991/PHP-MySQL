@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes</title>
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
 <body>
@@ -13,7 +12,6 @@
     require_once "includes/banco.php";
     require_once "includes/funcoes.php";
     require_once "cabecalho.php";
-    require_once "includes/login.php";
     ?>
     <main>
         <header>
@@ -44,14 +42,12 @@
                 </div>
                 <div class="border descricao">
                     <?php
+                        require_once "admin.php";
                         echo "<h4>Genero: $genero->nome</h4>";
                         echo "<h4>Produtora: $produtora->nome</h4>";
                         echo "<h4>Nota: ". number_format($registro->nota, 1) . " / 10</h4>";
                         echo "<p>$registro->descricao</p>";
                     ?>
-                </div>
-                <div class="border adm">
-                    <p>ADM</p>
                 </div>
             </div>
         </div>

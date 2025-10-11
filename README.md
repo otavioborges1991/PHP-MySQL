@@ -45,4 +45,3 @@ Um banco de dados com usuários e suas senhas também foi criado para fazer logi
 `Nomes em Negrito são chaves, primaria se for o primeiro nome da lista, se não são extrangeiras`
 
 ---
-

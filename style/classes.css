@@ -62,3 +62,10 @@
     height: min-content;
     width: min-content;
 }
+
+.profile-pic {
+    display: inline-block;
+    height: 50px;
+    border: 1px solid blanchedalmond;
+    border-radius: 50%;
+}

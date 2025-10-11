@@ -26,9 +26,16 @@ function testarHash($senha, $hash):bool {
     return $ok;
 }
 
-function logout() {
-    session_unset();  
-    //unset($_SESSION['user']);
-    //unset($_SESSION['nome']);
-    //unset($_SESSION['tipo']);
+function logout():void {
+    // Desconecta o usuário atual
+    session_unset();
+}
+
+function verificarSessao():bool {
+    // verifica se o usuário esta logado ou não
+    if (empty($_SESSION["user"])) {
+        return false;
+    } else {
+        return true;
+    }
 }

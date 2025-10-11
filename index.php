@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogos</title>
     <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/d0517b7da9.js" crossorigin="anonymous">
 
+    </script>
 </head>
 <body>
     <?php 
@@ -59,7 +61,11 @@
             <thead>
                 <th>Foto</th>
                 <th>Nome</th>
-                <th>Adm</th>
+                <?php
+                if ($_SESSION['tipo'] == 'admin') {
+                    echo "<th>Adm</th>";
+                }
+                ?>
             </thead>
             <?php
             $termos = "SELECT j.codigo, j.nome, g.nome genero, j.capa, p.nome produtora FROM jogos j 
@@ -113,7 +119,9 @@
                         echo "<td><img src='{$thumbnail}' alt='{$reg->nome}'></td>";
                         echo "<td><h2><a href='detalhes.php?codigo={$reg->codigo}' target='_self' referrerpolicy='same-origin'>$reg->nome</h2></a>
                         <p>[$genero]</p><p>$produtora</p></td>";
-                        echo "<td>ADM</td></tr>";
+                        // Area de admin e editor
+                        require 'admin.php';
+                        echo "</tr>";
                     }
                 }
             }

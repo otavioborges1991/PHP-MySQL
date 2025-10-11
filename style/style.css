@@ -3,7 +3,6 @@
 @import url(article.css);
 @import url(flex.css);
 @import url(classes.css);
-@import url(grid.css);
 @import url(cores.css);
 @import url(botao.css);
 /* CSS Document */
@@ -18,6 +17,7 @@
 
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body {
