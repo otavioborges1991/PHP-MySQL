@@ -30,7 +30,6 @@
                 if ($query->num_rows > 0) {
                     $registro = $query->fetch_object();
                     if (testarHash($senha, $registro->senha)) {
-                    // if ('$2y$10$UpMQCcir.v649HrdLvUXiOC/ftU7xWhSxm8QhX.VzSe9LZHhvW/Ty' == $registro->senha) {
                         echo msg_sucesso("Sucesso");
                         $_SESSION["user"] = $registro->email;
                         $_SESSION["nome"] = $registro->nome_completo;

@@ -31,7 +31,11 @@ function msg_aviso($mensagem='Aviso!') {
 }
 
 function msg_erro($mensagem='Erro!'){
-    return "<div class='erro'><span class='material-symbols-outlined'>error</span>$mensagem</div>";
+    return 
+        "<div class='erro'>
+            <span class='material-symbols-outlined'>error</span>
+            <h2>$mensagem</h2>
+        </div>";
 }
 
 function voltar() {

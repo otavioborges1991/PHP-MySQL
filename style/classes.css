@@ -69,3 +69,11 @@
     border: 1px solid blanchedalmond;
     border-radius: 50%;
 }
+
+.gap {
+    gap: 5px;
+}
+
+.justify-right {
+    text-justify: right;
+}
