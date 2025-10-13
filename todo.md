@@ -14,3 +14,4 @@
 - - [] args=titulo e args=mensagem para o msg_aviso()
 - - [] args=titulo e args=mensagem para o msg_erro()
 - [] O tema de icones é inconsistente. ha material icons do google junto com font awesome, usar só um deles
+- [] codigo para inserir icones podem devem guardados em variaveis.

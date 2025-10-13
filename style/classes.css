@@ -77,3 +77,7 @@
 .justify-right {
     text-justify: right;
 }
+
+.space-evenly {
+    justify-content: space-evenly;
+}
