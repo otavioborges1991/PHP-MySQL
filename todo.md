@@ -1,17 +1,27 @@
 # Tarefas
 
-- [] Re-estilizar a pagina inteira, o css precisa ser retrabalhado para o site inteiro.
+- [] usar os vários problemas de edição para praticar git e github "issues" branches, pull requests, etc...
+- [] nomeação inconsistente, alguns arquivos estão com nomes em inglês, outros em português, não tem um padrão só.
+- [] todos os links deveria ser armazenados em variáveis para melhorar possíveis refatorações futuras.
+- [] Re-estilizar a página inteira, o css precisa ser retrabalhado para o site inteiro.
 - - [] user-info.php.
-- [] Mudar como é feita a encriptação, encriptar senhas também pode ser feito com o mysql usarndo sha2(256, "senha"), não é preciso usar php para isso.
+- [] Mudar como é feita a encriptação, encriptar senhas também pode ser feito com o mysql usando sha2(256, "senha"), não é preciso usar php para isso.
 - [] Páginas devem estrar dentro de uma pasta separa para páginas.
-- [] thumbnail e imagem para a pagina de detalhes devem ser diferentes.
-- - [] a thumbnail não dever ser maior de 100x100.
+- [] "thumbnail" e imagem para a pagina de detalhes devem ser diferentes.
+- - [] a "thumbnail" não dever ser maior de 100x100.
 - [] O sistema de mensagem tem que ser melhorados
 - - [] um único arquivo com o modelo para as mensagens
 - - - [] css com definições para mensagens de erro, aviso e sucesso
-- - - [] a variavel $classe usado dentro do modelo faz com que esse arquivo seja estilizado dinamicamente.
+- - - [] a variável $classe usado dentro do modelo faz com que esse arquivo seja estilizado dinamicamente.
 - - [] args=titulo e args=mensagem para o msg_sucesso()
 - - [] args=titulo e args=mensagem para o msg_aviso()
 - - [] args=titulo e args=mensagem para o msg_erro()
-- [] O tema de icones é inconsistente. ha material icons do google junto com font awesome, usar só um deles
-- [] codigo para inserir icones podem devem guardados em variaveis.
+- [] O tema de ícones é inconsistente. ha material icons do Google junto com font-awesome, usar só um deles
+- [] Código para inserir ícones podem devem guardados em variáveis.
+- [] uma função para fazer todos os testes para saber se o usuário esta logado, deve ser usado sempre que o usuário tem que ser checado, o sistema atual não parece estar funcionando.
+- [] db queries provavelmente podem ser postas em um arquivo .sql ao invés do sistema atual.
+- [] um caminho para fotos de usuário deve ser adicionado ao banco de dados.
+- [] A opção de ir a uma pagina aonde você ja esta deve ser escondida, talvez uma função que tome como argumentos o url da pagina posso fazer isso.
+- [] user-edit-form.php
+- - [] fieldset tipo de usuário: uma função para criar os input:radio do tipos de usuário que coloca checked de acordo com o tipo de usuário detectado, e um array contendo cada tipo de usuário.
+- - [] fieldset informações básicas: nome e-mail devem se preencher com os valores atuais do usuário

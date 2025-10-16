@@ -39,10 +39,8 @@
                             $selected = null;
                         }
                         echo "<option $selected value='$chave'>$valor</option>";
-                       
                     }
                     ?>
-
                 </select>
                 <label for="ascendente">
                     0-9 A-Z

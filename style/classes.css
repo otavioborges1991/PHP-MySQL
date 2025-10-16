@@ -81,3 +81,7 @@
 .space-evenly {
     justify-content: space-evenly;
 }
+
+.inline-block {
+    display: inline-block;
+}

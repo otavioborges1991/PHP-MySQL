@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="style/style.css">
 <?php
 require_once "includes/funcoes.php";
-require_once 'includes/login.php'
+require_once 'includes/login.php';
 ?>
 <header>
     <nav>

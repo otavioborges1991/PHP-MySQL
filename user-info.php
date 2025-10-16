@@ -13,12 +13,11 @@
         ?>
     </div>
     <?php
-    echo "<a class='botao' href='#'>Meus dados</a>";
+    echo "<a class='botao' href='user-edit.php'>Meus dados</a>";
     if ($_SESSION['tipo'] == 'admin'){
         echo 
             "<a class='botao'  href='cadastro-usuario.php'>Novo Usuário</a>
-            <a class='botao' href='#'>Novo Jogo</a>"
-            ;
+            <a class='botao' href='#'>Novo Jogo</a>";
     }
     echo '<a class="botao" href="user-logout.php">Sair</a>';
     ?>
