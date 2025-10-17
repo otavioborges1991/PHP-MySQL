@@ -1,3 +1,10 @@
+<?php
+    require_once 'includes/banco.php';
+    $query = "SELECT email, nome_completo, senha, tipo from usuarios
+    WHERE email='" . $_SESSION['email'] . "'";
+    $busca = $banco->query($query);
+    $registro = $busca->fetch_object();
+?>
 <form action="user-edit.php" method="post" id="form">
     <h2>Editar informações de usuário</h2>
     <div class="flex-row">
@@ -15,8 +22,8 @@
                     </label>
                 </div>
                 <div class="flex-column gap">
-                    <input type="text" name="nome" id="nome" maxlength="100">
-                    <input type="text" name="email" id="email" maxlength="100">
+                    <input type="text" name="nome" id="nome" maxlength="100" value="<?php echo $registro->nome_completo;?>">
+                    <input type="text" name="email" id="email" maxlength="100" value="<?php echo $registro->email;?>">
                 </div>
             </div>
             <div class="margin">

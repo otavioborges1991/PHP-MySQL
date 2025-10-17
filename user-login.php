@@ -31,7 +31,7 @@
                     $registro = $query->fetch_object();
                     if (testarHash($senha, $registro->senha)) {
                         echo msg_sucesso("Sucesso");
-                        $_SESSION["user"] = $registro->email;
+                        $_SESSION["email"] = $registro->email;
                         $_SESSION["nome"] = $registro->nome_completo;
                         $_SESSION["tipo"] = $registro->tipo;
                         header("Location: index.php");

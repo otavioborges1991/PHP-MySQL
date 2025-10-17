@@ -61,13 +61,11 @@
                 }
             }
         }
+        echo voltar();
         ?>
-
-
     </main>
-    
     <?php
-    require_once 'rodape.php';
+        require_once 'rodape.php';
     ?>    
 </body>
 </html>

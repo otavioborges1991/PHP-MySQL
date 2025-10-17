@@ -1,9 +1,9 @@
 <?php
 // Sistema de login
 session_start();
-if ( !isset($_SESSION['user']) ) 
+if ( !isset($_SESSION['email']) ) 
 {
-    $_SESSION["user"] = "";
+    $_SESSION["email"] = "";
     $_SESSION["nome"] = "";
     $_SESSION["tipo"] = "";
 }
@@ -33,7 +33,7 @@ function logout():void {
 
 function verificarSessao():bool {
     // verifica se o usuário esta logado ou não
-    if (empty($_SESSION["user"])) {
+    if (empty($_SESSION["email"])) {
         return false;
     } else {
         return true;
